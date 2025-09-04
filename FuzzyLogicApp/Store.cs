@@ -6,7 +6,7 @@ namespace FuzzyLogicApp
 {
     class Store
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Création du système
             WriteLine("Gestion du store", true);
@@ -62,8 +62,6 @@ namespace FuzzyLogicApp
             system.SetInputVariable(eclair, 80000);
             WriteLine("Attendu : store plutôt fermé");
             WriteLine("Résultat : " + system.Solve() + "\n");
-
-            while (true) ;
         }
 
         private static void WriteLine(string msg, bool stars = false)

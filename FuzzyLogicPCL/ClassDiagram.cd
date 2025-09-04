@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FuzzyLogicPCL.FuzzyExpression">
+    <Position X="9.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>FuzzyExpression.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Lv" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzyRule">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <AssociationLine Name="Premises" Type="FuzzyLogicPCL.FuzzyExpression" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="12.75" Y="2" />
+        <Point X="12.375" Y="2" />
+        <Point X="12.375" Y="2" />
+        <Point X="11" Y="2" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAIMAAAFQAABAAAAAAAAAAAAAMQAAAAAAAAAQAAAA=</HashCode>
+      <FileName>FuzzyRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Conclusion" />
+      <Field Name="val" />
+      <Field Name="rulePremise" />
+      <Field Name="problemValue" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="Premises" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzySystem">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAAAAAAAAAEEAIAAQYUIAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>FuzzySystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Output" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="Inputs" />
+      <Field Name="Rules" />
+      <Field Name="Problem" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzyValue">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAQAAAAA=</HashCode>
+      <FileName>FuzzyValue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Lv" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.LinguisticValue">
+    <Position X="3.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIQAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinguisticValue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Fs" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.LinguisticVariable">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAQCAAAQgAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>LinguisticVariable.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Values" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzySets.TriangularFuzzySet">
+    <Position X="3.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FuzzySets\TriangularFuzzySet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzySets.FuzzySet">
+    <Position X="3.75" Y="8" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="result" Type="FuzzyLogicPCL.FuzzySets.FuzzySet" ManuallyRouted="true">
+      <Path>
+        <Point X="3.75" Y="9.351" />
+        <Point X="2.969" Y="9.351" />
+        <Point X="2.969" Y="10.608" />
+        <Point X="3.75" Y="10.608" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ARIUIAAAABAApIYFNRBCgIIAUwQAAaCBCAAAIBiAAuA=</HashCode>
+      <FileName>FuzzySets\FuzzySet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="result" />
+      <Field Name="oldPt" />
+      <Field Name="newPt" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="Points" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzySets.LeftFuzzySet">
+    <Position X="8" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FuzzySets\LeftFuzzySet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzySets.RightFuzzySet">
+    <Position X="5.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FuzzySets\RightFuzzySet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FuzzyLogicPCL.FuzzySets.TrapezoidalFuzzySet">
+    <Position X="9.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FuzzySets\TrapezoidalFuzzySet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FuzzyLogicPCL.Point2D">
+    <Position X="6.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>FuzzySets\Point2D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

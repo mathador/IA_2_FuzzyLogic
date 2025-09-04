@@ -7,7 +7,7 @@ namespace FuzzyLogicApp
     class Test
     {
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Création des Fuzzy Sets
             FuzzySet fz = new FuzzySet(0, 100);
@@ -26,7 +26,7 @@ namespace FuzzyLogicApp
             RightFuzzySet rfz = new RightFuzzySet(0, 100, 70, 80);
 
             // Calcul des degrés
-            /*Console.WriteLine("**** Degree Fuzzy Set quelconque ****");
+            Console.WriteLine("**** Degree Fuzzy Set quelconque ****");
             PrintDegrees(fz);
             Console.WriteLine("\n**** Test Triangular Fuzzy Set ****");
             PrintDegrees(tifz);
@@ -37,10 +37,10 @@ namespace FuzzyLogicApp
             Console.WriteLine("\n**** Test Left Fuzzy Set ****");
             PrintDegrees(lfz);
             Console.WriteLine("\n**** Test Right Fuzzy Set ****");
-            PrintDegrees(rfz);*/
+            PrintDegrees(rfz);
 
             // Affichage
-            /*Console.WriteLine("\n**** Print ****");
+            Console.WriteLine("\n**** Print ****");
             Console.WriteLine("Trap Fuzzy Set :");
             Console.WriteLine(trfz.ToString());
             Console.WriteLine("Left Fuzzy Set :");
@@ -48,27 +48,27 @@ namespace FuzzyLogicApp
             Console.WriteLine("Triang Fuzzy Set :");
             Console.WriteLine(tifz.ToString());
             Console.WriteLine("Inverse triang Fuzzy Set :");
-            Console.WriteLine(itifz.ToString());*/
+            Console.WriteLine(itifz.ToString());
 
             // Test des opérateurs
-            /*Console.WriteLine("\n**** Test operators ****");
+            Console.WriteLine("\n**** Test operators ****");
             Console.WriteLine("1/2 Trap Fuzzy Set :");
             Console.WriteLine((trfz * 0.5).ToString());
             Console.WriteLine("1/4 Left Fuzzy Set :");
-            Console.WriteLine((lfz * 0.25).ToString());*/
+            Console.WriteLine((lfz * 0.25).ToString());
 
             // Test égalité
-            /*Console.WriteLine("\n**** Test equality ****");
+            Console.WriteLine("\n**** Test equality ****");
             Console.WriteLine("Trap Fuzzy Set 1 :");
             Console.WriteLine(trfz.ToString());
             Console.WriteLine("Trap Fuzzy Set 2 :");
             Console.WriteLine(trfz2.ToString());
             Console.WriteLine("TRFZ == TRFZ2 (true) : " + (trfz == trfz2));
             Console.WriteLine("TRFZ != TRFZ2 (false) : " + (trfz != trfz2));
-            Console.WriteLine("TRFZ == LFZ (false) : " + (trfz == lfz));*/
+            Console.WriteLine("TRFZ == LFZ (false) : " + (trfz == lfz));
 
             // Test intersection
-            /*Console.WriteLine("\n**** Test intersection");
+            Console.WriteLine("\n**** Test intersection");
             Console.WriteLine("FS1 : " + trfz.ToString());
             Console.WriteLine("FS2 : " + lfz.ToString());
             Console.WriteLine("TIFS : " + tifz.ToString());
@@ -84,10 +84,10 @@ namespace FuzzyLogicApp
             Console.WriteLine("FS2 & TIFS : " + (lfz & tifz).ToString());
             Console.WriteLine("FS2 & FS : " + (lfz & fz).ToString());
             Console.WriteLine("tri1 & tri2 : " + (new TriangularFuzzySet(20, 100, 40, 50, 60) & new TriangularFuzzySet(0, 80, 30, 40, 50)).ToString());
-            Console.WriteLine("tri2 & tri1 : " + (new TriangularFuzzySet(0, 80, 30, 40, 50) & new TriangularFuzzySet(20, 100, 40, 50, 60)).ToString());*/
+            Console.WriteLine("tri2 & tri1 : " + (new TriangularFuzzySet(0, 80, 30, 40, 50) & new TriangularFuzzySet(20, 100, 40, 50, 60)).ToString());
 
             // Test union 
-            /*Console.WriteLine("\n**** Test union");
+            Console.WriteLine("\n**** Test union");
             Console.WriteLine("FS1 : " + trfz.ToString());
             Console.WriteLine("FS2 : " + lfz.ToString());
             Console.WriteLine("TIFS : " + tifz.ToString());
@@ -103,14 +103,14 @@ namespace FuzzyLogicApp
             Console.WriteLine("FS2 | TIFS : " + (lfz | tifz).ToString());
             Console.WriteLine("FS2 | FS : " + (lfz | fz).ToString());
             Console.WriteLine("tri1 | tri2 : " + (new TriangularFuzzySet(20, 100, 40, 50, 60) | new TriangularFuzzySet(0, 80, 30, 40, 50)).ToString());
-            Console.WriteLine("tri2 | tri1 : " + (new TriangularFuzzySet(0, 80, 30, 40, 50) | new TriangularFuzzySet(20, 100, 40, 50, 60)).ToString());*/
+            Console.WriteLine("tri2 | tri1 : " + (new TriangularFuzzySet(0, 80, 30, 40, 50) | new TriangularFuzzySet(20, 100, 40, 50, 60)).ToString());
 
             // Test centre de gravité
-            /*Console.WriteLine("\n**** Test centre de gravité");
+            Console.WriteLine("\n**** Test centre de gravité");
             Console.WriteLine("TRFS : " + trfz.ToString());
             Console.WriteLine("TRFS CoG : " + trfz.Centroid());
-            Console.WriteLine("1/2 TRFS : " + (trfz*0.5).ToString());
-            Console.WriteLine("1/2 TRFS CoG : " + (trfz*0.5).Centroid());
+            Console.WriteLine("1/2 TRFS : " + (trfz * 0.5).ToString());
+            Console.WriteLine("1/2 TRFS CoG : " + (trfz * 0.5).Centroid());
             Console.WriteLine("TIFS : " + tifz.ToString());
             Console.WriteLine("TIFS CoG : " + tifz.Centroid());
             Console.WriteLine("LFS : " + lfz.ToString());
@@ -120,9 +120,7 @@ namespace FuzzyLogicApp
             Console.WriteLine("TRFS & LFZ : " + (trfz & lfz).ToString());
             Console.WriteLine("TRFS & LFZ CoG : " + (trfz & lfz).Centroid());
             Console.WriteLine("TRFS | LFZ : " + (trfz | lfz).ToString());
-            Console.WriteLine("TRFS | LFZ CoG : " + (trfz | lfz).Centroid());*/
-
-            while (true) ;
+            Console.WriteLine("TRFS | LFZ CoG : " + (trfz | lfz).Centroid());
         }
 
         static void PrintDegree(double x, FuzzySet fs)
