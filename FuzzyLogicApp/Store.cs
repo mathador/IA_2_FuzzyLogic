@@ -41,11 +41,21 @@ namespace FuzzyLogicApp
 
             WriteLine("2) Ajout des règles", true);
 
-            // Création des règles 
-            system.addFuzzyRule("IF Eclairage IS Sombre THEN Store IS Remonte");
+            // Création des règles  (page 113 du livre)
+            // -----------------------------------------------------------
+            // | Éclairage →        |   Sombre       |   Moyen        |   Fort       |
+            // | Température ↓      |                |                |              |
+            // -----------------------------------------------------------
+            // | Froid              | R1. Remonté    | R2. Remonté    | R3. Remonté  |
+            // | Frais              | R4. Remonté    | R5. Remonté    | R6. Mi-hauteur |
+            // | Bon                | R7. Remonté    | R8. Mi-hauteur | R9. Fermé    |
+            // | Chaud              | R10. Remonté   | R11. Mi-hauteur| R12. Fermé   |
+            // -----------------------------------------------------------
+
+            system.addFuzzyRule("IF Eclairage IS Sombre THEN Store IS Remonte"); // R1 4 7 10
             system.addFuzzyRule("IF Eclairage IS Moyen AND Temperature IS Froid THEN Store IS Remonte");
             system.addFuzzyRule("IF Eclairage IS Moyen AND Temperature IS Frais THEN Store IS Remonte");
-            system.addFuzzyRule("IF Eclairage IS Moyen AND Temperature IS Bon THEN Store IS MiHauteur");
+            system.addFuzzyRule("IF Eclairage IS Moyen AND Temperature IS Bon THEN Store IS MiHauteur"); // R8
             system.addFuzzyRule("IF Eclairage IS Moyen AND Temperature IS Chaud THEN Store IS MiHauteur");
             system.addFuzzyRule("IF Eclairage IS Fort AND Temperature IS Froid THEN Store IS Remonte");
             system.addFuzzyRule("IF Eclairage IS Fort AND Temperature IS Frais THEN Store IS MiHauteur");
