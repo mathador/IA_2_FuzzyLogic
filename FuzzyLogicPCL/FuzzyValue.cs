@@ -1,15 +1,14 @@
 ﻿
-namespace FuzzyLogicPCL
-{
-    class FuzzyValue
-    {
-        internal LinguisticVariable Lv;
-        internal double Value;
+namespace FuzzyLogicPCL;
 
-        public FuzzyValue(LinguisticVariable _lv, double _value)
-        {
-            Lv = _lv;
-            Value = _value;
-        }
+class FuzzyValue
+{
+    internal LinguisticVariable Lv;
+    internal double Value;
+
+    public FuzzyValue(LinguisticVariable lv, double value)
+    {
+        Lv = lv;
+        Value = value;
     }
 }

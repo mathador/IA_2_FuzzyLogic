@@ -1,48 +1,42 @@
 ﻿using FuzzyLogicPCL.FuzzySets;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace FuzzyLogicPCL
+namespace FuzzyLogicPCL;
+
+public class LinguisticVariable
 {
-    public class LinguisticVariable
+    internal string Name { get; set; }
+    List<LinguisticValue> Values { get; set; }
+    internal double MinValue { get; set; }
+    internal double MaxValue { get; set; }
+
+    public LinguisticVariable(string name, double Min, double Max)
     {
-        internal String Name { get; set; }
-        List<LinguisticValue> Values { get; set; }
-        internal Double MinValue { get; set; }
-        internal Double MaxValue { get; set; }
+        Values = [];
+        Name = name;
+        MinValue = Min;
+        MaxValue = Max;
+    }
 
-        public LinguisticVariable(String _name, double _min, double _max)
-        {
-            Values = new List<LinguisticValue>();
-            Name = _name;
-            MinValue = _min;
-            MaxValue = _max;
-        }
+    public void AddValue(LinguisticValue lv)
+    {
+        Values.Add(lv);
+    }
 
-        public void AddValue(LinguisticValue lv) {
-            Values.Add(lv);
-        }
+    public void AddValue(string name, FuzzySet fs)
+    {
+        Values.Add(new LinguisticValue(name, fs));
+    }
 
-        public void AddValue(String name, FuzzySet fs)
-        {
-            Values.Add(new LinguisticValue(name, fs));
-        }
+    public void ClearValues()
+    {
+        Values.Clear();
+    }
 
-        public void ClearValues() {
-            Values.Clear();
-        }
-
-        internal LinguisticValue LinguisticValueByName(string name)
-        {
-            name = name.ToUpper();
-            foreach (LinguisticValue val in Values)
-            {
-                if (val.Name.ToUpper().Equals(name))
-                {
-                    return val;
-                }
-            }
-            return null;
-        }
+    internal LinguisticValue LinguisticValueByName(string name)
+    {
+        return Values
+            .FirstOrDefault(val => val.Name.Equals(name, System.StringComparison.OrdinalIgnoreCase));
     }
 }
